@@ -27,6 +27,7 @@
                 else :
                     ?>
                     <ul>
+                        <li><a href="<?php echo get_settings('home'); ?>">Home<strong>All posts</strong></a></li>
                         <?php wp_list_pages('title_li=&depth=-1'); ?>
                         <div class='clear'>
                     </ul>

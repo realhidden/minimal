@@ -18,19 +18,21 @@ header ul{
 }
 
 header ul li:nth-child(n){
-    border-bottom: 1px solid   #D2D2D2;
+    border-bottom: 1px solid #D2D2D2;
     border-right: 1px solid #D2D2D2;
+    width: 88px;
 }
 
 header ul li:nth-child(3n){
     border-right: none;
+    width: 89px;
 }
 
 header ul li:nth-child(3n+1){
     border-left: none;
 }
 
-header ul li a {
+header ul li.page_item a {
     /* from strong */
     color:#222;
     font-weight:700;
