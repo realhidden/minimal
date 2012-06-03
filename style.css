@@ -1,0 +1,145 @@
+/*
+Theme Name: Minimal (GitHub page theme)
+Theme URI: https://github.com/realhidden/minimal
+Author: Steve Smith & Zsombor Paroczi
+Author URI: https://github.com/realhidden
+Description: GitHub page theme turned into simple Wordpress theme. Original theme done by Steve Smith (https://github.com/orderedlist)
+Version: 1.0
+License: Creative Commons Attribution-ShareAlike 3.0 Unported License.
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+Tags: minimal typo
+*/
+
+@import url("stylesheets/styles.css");
+
+/* header menu fixes */
+header ul{
+    height:auto;
+}
+
+header ul li:nth-child(n){
+    border-bottom: 1px solid   #D2D2D2;
+    border-right: 1px solid #D2D2D2;
+}
+
+header ul li:nth-child(3n){
+    border-right: none;
+}
+
+header ul li:nth-child(3n+1){
+    border-left: none;
+}
+
+header ul li a {
+    /* from strong */
+    color:#222;
+    font-weight:700;
+
+    /* from header ul a strong */
+    font-size: 14px;
+    display: block;
+
+    padding-top: 14px;
+    height: 26px;
+}
+
+/* Clear */
+div.clear{
+    clear: both;
+}
+
+/* Don't hide menu, just make it "text-only"*/
+@media print, screen and (max-width: 480px) {
+    header ul{
+        display: block;
+        background: transparent;
+        border-color:transparent;
+        height: auto;
+        width: auto;
+        -webkit-box-shadow: inset 0px 2px 2px 0px transparent;
+        -moz-box-shadow: inset 0px 2px 2px 0px  transparent;
+        box-shadow: inset 0px 2px 2px 0px  transparent;
+    }
+    
+    header ul li{
+        height: auto;
+        width: auto !important;
+        background: transparent !important;
+        border:1px solid transparent !important;
+    }
+    
+    header ul li a{
+        height: auto;
+        padding:5px;
+    }
+    
+    header ul li a:hover{
+        background: transparent !important;
+    }
+}
+
+/* custom form elements */
+input,textarea{
+    /* from body */
+    font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:#777;
+    font-weight:300;
+
+    /* from header ul */
+    border-radius:5px;
+    border:1px solid #d2d2d2;
+    box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
+}
+
+input[type="button"], 
+input[type="submit"], 
+input[type="reset"], 
+input[type="file"], 
+button{
+
+
+    /* from header ul */
+    background: #eee;
+    background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
+    background: -webkit-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+    background: -o-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+    background: -ms-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+    background: linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+
+    /* custom padding */
+    padding:2px 15px;
+}
+
+input[type="button"]:hover, 
+input[type="submit"]:hover, 
+input[type="reset"]:hover, 
+input[type="file"]:hover, 
+button:hover {
+    /* from header ul a:hover */
+    color:#999;
+    background: -moz-linear-gradient(top, #fff 0%, #ddd 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#ddd));
+    background: -webkit-linear-gradient(top, #fff 0%,#ddd 100%);
+    background: -o-linear-gradient(top, #fff 0%,#ddd 100%);
+    background: -ms-linear-gradient(top, #fff 0%,#ddd 100%);
+    background: linear-gradient(top, #fff 0%,#ddd 100%);
+}
+
+input[type="button"]:active, 
+input[type="submit"]:active, 
+input[type="reset"]:active, 
+input[type="file"]:active, 
+button:hover {
+    /* from header ul a:active */
+    -webkit-box-shadow: inset 0px 2px 2px 0px #ddd;
+    -moz-box-shadow: inset 0px 2px 2px 0px #ddd;
+    box-shadow: inset 0px 2px 2px 0px #ddd;
+}
+
+/* Wordpress theme specific stuff */
+.postdate{
+    margin-top:-20px;
+    margin-bottom:20px;
+    display: block;
+}
